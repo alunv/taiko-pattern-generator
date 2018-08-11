@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1532870581 source:d:\foldery\taikopatterngenerator\hitsounds.cpp
+
+1532870945 source:d:\foldery\taikopatterngenerator\main.cpp
+	<iostream>
+	"Hitsounds.hpp"
+
+1532871193 d:\foldery\taikopatterngenerator\hitsounds.hpp
+
+1533933392 source:d:\foldery\taikopatterngenerator\src\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Hitsound.h"
+	"Hitobject.h"
+	"Timeline.h"
+
+1532871193 d:\foldery\taikopatterngenerator\src\hitsounds.hpp
+
+1533843127 source:d:\foldery\taikopatterngenerator\src\hitobject.cpp
+	"Hitobject.h"
+	"Hitsound.h"
+
+1533843203 d:\foldery\taikopatterngenerator\include\hitobject.h
+	<string>
+	<sstream>
+	"Hitsound.h"
+
+1533843203 d:\foldery\taikopatterngenerator\include\hitsound.h
+
+1533842722 source:d:\foldery\taikopatterngenerator\src\timeline.cpp
+	<fstream>
+	"Timeline.h"
+
+1533843203 d:\foldery\taikopatterngenerator\include\timeline.h
+	<cstdlib>
+	<ctime>
+	<vector>
+	"Hitobject.h"
+
