@@ -25,9 +25,26 @@ class Timeline {
  public:
     Timeline(float, int=0);
     ~Timeline();
+
+    /**
+        Returns the hitobject at given index.
+    */
     Hitobject object_at(unsigned);
+
+    /**
+        Fills the timeline with randomly generated hitobjects.
+    */
     void generate_random(unsigned);
+
+    /**
+        Adds a hitobject to the timeline's end.
+    */
     void add_object(Hitobject);
+
+    /**
+        Outputs all hitobjects' string representations
+        to the given output stream.
+    */
     void output_all(std::basic_ostream<char>& stream);
  private:
     std::vector<Hitobject> objs;

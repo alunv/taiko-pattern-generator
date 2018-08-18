@@ -16,6 +16,9 @@
 #ifndef HITSOUND_HPP_INCLUDED
 #define HITSOUND_HPP_INCLUDED
 
+/**
+    Binary representations of hitsounds.
+*/
 enum Hitsound {
     H_NONE = 0b0000,
     H_WHISTLE = 0b0010,

@@ -25,8 +25,25 @@ class Hitobject {
     int x, y, pos, hsound;
  public:
     Hitobject(int, int=H_NONE, int=256, int=192);
+
+    /**
+        Returns this hitobject's hitsound as an int.
+    */
     int get_hitsound_number();
+
+    /**
+        Sets hitsound of this hitobject.
+        As an argument, I suggest passing a value from
+        the Hitsound enum.
+        Use bitwise OR to apply multiple hitsounds
+        (e.g. H_CLAP | H_FINISH).
+    */
     void set_hitsound(int);
+
+    /**
+        Converts hitobject to a string representation,
+        which is ready to be used by osu.
+    */
     std::string str();
 };
 

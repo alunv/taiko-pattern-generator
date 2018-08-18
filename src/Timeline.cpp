@@ -29,14 +29,12 @@ Hitobject Timeline::object_at(unsigned index) {
     return objs[index];
 }
 
-void Timeline::generate_random(unsigned length) {
+void Timeline::generate_random(unsigned amount) {
     srand(time(NULL));
     if(!objs.empty())
         objs.erase(objs.begin(),objs.end());
 
-    //TODO: I need to finish this.
-
-    for(unsigned i=0;i<length;++i) {
+    for(unsigned i=0;i<amount;++i) {
         if(rand()%2 == 0)
             objs.push_back(Hitobject(offset+i*interval()));
         else
