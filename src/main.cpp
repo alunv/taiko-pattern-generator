@@ -20,10 +20,10 @@
 #include "Hitobject.h"
 #include "Timeline.h"
 
-using namespace std;
+using std::string;
 
 static void show_usage(string name) {
-    cerr << "Usage: " << name[0]
+    std::cerr << "Usage: " << name[0]
         << " <output_file> <bpm> <offset> <option> <option_argument>\n"
         << "Arguments:\n"
         << "\toutput_file\tFile where objects are generated to\n"
@@ -31,7 +31,7 @@ static void show_usage(string name) {
         << "\t\toffset\tMap's offset\n"
         << "Options:\n"
         << "\t-r LENGTH\tGenerates a random stream of the given LENGTH\n"
-        << endl;
+        << std::endl;
 }
 
 int main(int args, char** argv) {
@@ -40,7 +40,7 @@ int main(int args, char** argv) {
         exit(1);
     }
 
-    fstream f(argv[1], ios::out);
+    std::fstream f(argv[1], std::ios::out);
     if(!f.good())
         exit(1);
 
