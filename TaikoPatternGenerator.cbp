@@ -40,6 +40,7 @@
 		<Unit filename="include/Timeline.h" />
 		<Unit filename="src/Hitobject.cpp" />
 		<Unit filename="src/Timeline.cpp" />
+		<Unit filename="src/actions/GenerateRandom.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
