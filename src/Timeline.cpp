@@ -25,8 +25,8 @@ void Timeline::add_object(Hitobject object) {
     objs.push_back(object);
 }
 
-Hitobject Timeline::object_at(unsigned index) {
-    return objs[index];
+Hitobject Timeline::object_at(size_t index) {
+    return objs.at(index);
 }
 
 void Timeline::output_all(std::basic_ostream<char>& stream) {

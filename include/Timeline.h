@@ -29,7 +29,7 @@ class Timeline {
     /**
         Returns the hitobject at given index.
     */
-    Hitobject object_at(unsigned);
+    Hitobject object_at(size_t);
 
     /**
         Fills the timeline with randomly generated hitobjects.
