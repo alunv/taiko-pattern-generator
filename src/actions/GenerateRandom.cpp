@@ -13,31 +13,17 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-#include <fstream>
 #include "Timeline.h"
 
-Timeline::Timeline(float bpm, int _offset) {
-    tempo = bpm;
-    offset = _offset;
-}
+void Timeline::generate_random(unsigned amount) {
+    srand(time(NULL));
+    if(!objs.empty())
+        objs.erase(objs.begin(),objs.end());
 
-void Timeline::add_object(Hitobject object) {
-    objs.push_back(object);
-}
-
-Hitobject Timeline::object_at(unsigned index) {
-    return objs[index];
-}
-
-void Timeline::output_all(std::basic_ostream<char>& stream) {
-    for(auto i : objs)
-        stream << i.str() << std::endl;
-}
-
-float Timeline::interval() {
-    return 60000.0/tempo;
-}
-
-Timeline::~Timeline() {
-    objs.erase(objs.begin(),objs.end());
+    for(unsigned i=0;i<amount;++i) {
+        if(rand()%2 == 0)
+            objs.push_back(Hitobject(offset+i*interval()));
+        else
+            objs.push_back(Hitobject(offset+i*interval(), H_CLAP));
+    }
 }
