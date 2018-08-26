@@ -16,9 +16,8 @@
 #include <fstream>
 #include "Timeline.h"
 
-Timeline::Timeline(float bpm, int _offset) {
-    tempo = bpm;
-    offset = _offset;
+Timeline::Timeline(Timing t) {
+    timing = t;
 }
 
 void Timeline::add_object(Hitobject object) {
@@ -35,7 +34,7 @@ void Timeline::output_all(std::basic_ostream<char>& stream) {
 }
 
 float Timeline::interval() {
-    return 60000.0/tempo;
+    return 60000.0/timing.tempo;
 }
 
 Timeline::~Timeline() {

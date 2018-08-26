@@ -22,8 +22,14 @@ void Timeline::generate_random(unsigned amount) {
 
     for(unsigned i=0;i<amount;++i) {
         if(rand()%2 == 0)
-            objs.push_back(Hitobject(offset+i*interval()));
+            objs.push_back(Hitobject(timing.offset+i*interval()));
         else
-            objs.push_back(Hitobject(offset+i*interval(), H_CLAP));
+            objs.push_back(Hitobject(timing.offset+i*interval(), H_CLAP));
     }
+}
+
+namespace action {
+void random(size_t length) {
+    Timeline t();
+}
 }

@@ -21,9 +21,14 @@
 #include <vector>
 #include "Hitobject.h"
 
+struct Timing {
+    float tempo;
+    int offset;
+};
+
 class Timeline {
  public:
-    Timeline(float, int=0);
+    Timeline(Timing);
     ~Timeline();
 
     /**
@@ -48,8 +53,7 @@ class Timeline {
     void output_all(std::basic_ostream<char>& stream);
  private:
     std::vector<Hitobject> objs;
-    float tempo;
-    int offset;
+    Timing timing;
     float interval();
 };
 #endif // TIMELINE_H
