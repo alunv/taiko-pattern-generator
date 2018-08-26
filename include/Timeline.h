@@ -39,7 +39,7 @@ class Timeline {
     /**
         Fills the timeline with randomly generated hitobjects.
     */
-    void generate_random(unsigned);
+    void generate_random(size_t);
 
     /**
         Adds a hitobject to the timeline's end.

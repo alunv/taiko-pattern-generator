@@ -15,7 +15,7 @@
 */
 #include "Timeline.h"
 
-void Timeline::generate_random(unsigned amount) {
+void Timeline::generate_random(size_t amount) {
     srand(time(NULL));
     if(!objs.empty())
         objs.erase(objs.begin(),objs.end());
